@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+}
+
+body {
+    background: url(../imagens/fundo-madeira.jpg) no-repeat top center;
+
+    /** cover para cubir a tela inteira como a igamen eh **/
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main {
+    position: relative;
+    height: 100vh;
+}
+
+section#telefone {
+    /** absoluto para poder estar mexendo no seu posicionamento, com os atributos permitido agora como o (top e left)**/
+    position: absolute; 
+    
+    /** o quadrado fica fora do posicionamento central pq a parte que ele centraliza eh o comeco do quadrado ou seja a parte (esquerda e cima) como a parte a ser centralizada**/
+    top: 50%;
+    left: 50%; 
+    
+    /** preicsa fazer uma transformação para que centralize o meio do quadrado no meio da tela, jogando o começo do quadrado como a cima (esquedo e cima) recuando 50% para a esquerda e 50% para cima **/
+    transform: translate(-50%, -50%);
+    height: 627px;
+    width: 311px;
+    background-color: blue;
+
+    /** adicionando a imagem e fazendo com que ela n se repita **/
+    background: url(../imagens/frame-iphone.png) no-repeat;
+}
