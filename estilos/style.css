@@ -15,7 +15,7 @@ html, body {
 body {
     background: url(../imagens/fundo-madeira.jpg) no-repeat top center;
 
-    /** cover para cubir a tela inteira como a igamen eh **/
+    /** cover para cubir a tela inteira como a igamen eh, ou seja ajusta a imagem para ficar comprimido ou estendido do tamanho da tela desejada e com a imagem sem cortes como ela eh originalmente **/
     background-size: cover;
     background-attachment: fixed;
 }
@@ -35,10 +35,41 @@ section#telefone {
     
     /** preicsa fazer uma transformação para que centralize o meio do quadrado no meio da tela, jogando o começo do quadrado como a cima (esquedo e cima) recuando 50% para a esquerda e 50% para cima **/
     transform: translate(-50%, -50%);
+
     height: 627px;
     width: 311px;
-    background-color: blue;
 
     /** adicionando a imagem e fazendo com que ela n se repita **/
     background: url(../imagens/frame-iphone.png) no-repeat;
+}
+
+iframe#tela {
+    position: relative;
+    top: 80px;
+    left: 22px;
+    width: 267px;
+    height: 471px;
+}
+
+section#redes-sociais {
+    text-align: right;
+}
+
+section#redes-sociais img {
+    width: 50px;
+    margin: 10px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px black;
+    
+    /** fazendo a bordar fazer parte do objeto(caixa) para que quando passado o mouse em cima n interfira nos elementos abaixo **/
+    box-sizing: border-box;
+}
+
+section#redes-sociais img:hover {
+    border: 2px solid white;
+    transform: translate(-3px, -3px);
+    box-shadow: 5px 5px 10px black;
+    
+    /** fazendo a tranzacao de forma suave ao passar o mouse em cima tando na movimentacao do icone quando para a borda aparecer tambem**/
+    transition: transform 0.3s, border .3s;
 }
